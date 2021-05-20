@@ -1,9 +1,227 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
+.header{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .menu{
+    &__list{
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+    }
+    &__list-link{
+      font-size: 15px;
+      line-height: 12px;
+      font-weight: 600;
+      color: #436372;
+      @extend %Rubik-500;
+    }
+    &__list-item + .menu__list-item{
+      padding-left: 35px;
+    }
+  }
+  .user-nav{
+    display: flex;
+    justify-content: space-between;
+    &__link{
+      position: relative;
+    }
+    &__link-img{
+      width: 18px;
+      height: 18px;
+    }
+    &__link-magnifier{
+      border: 1px solid #edf1f4;
+      background-color: #edf1f4;
+      border-radius: 50%;
+      padding: 15px;
+      margin-right: 20px;
+    }    
+    &__link-heartCart{
+      display: flex;
+      border: 1px solid #fcd7b6;
+      background-color: #fcd7b6;
+      border-radius: 30px;
+      padding: 0px 35px;
+      align-items: center;
+    }
+    &__line{
+      color: #fff;
+      font-size: 0;
+      border-right: 1px solid #fff;
+      padding: 5px 0px;
+    }
+    &__link-heart{
+      margin-right: 25px;
+      margin-top: 10px;
+    }  
+    &__link-cart{
+      margin-left: 27px;
+      margin-top: 10px;
+    }
+    &__link-menu{
+      border: 1px solid $btn;
+      background-color: $btn;
+      border-radius: 50%;
+      padding: 15px;
+      margin-left: 20px;
+    }
+    &__nam{
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: -6px;
+      right: -10px;
+      text-align: center;
+      line-height: 14px;
+      font-size: 10px;
+      @extend %DMSans-400;
+      color: $title__2;      
+      border: 1px solid #fff; 
+      border-radius: 50%;
+      background-color: #fff;
+      
+    }
+  }
+}
 
+
+.top-slider{
+  background-color: $accent;
+  padding-top: 225px;
+  &__title{
+    max-width: 470px;
+    font-size: 72px;
+    line-height: 70px;
+    @extend %Rubik-500;
+    color: $title__2;
+    margin-bottom: 40px;
+  }
+  &__text{
+    max-width: 310px;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    border: 1px solid $btn;
+    background-color: $btn;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 13px 60px 13px 20px;
+    color: #fff;
+    @extend %Rubik-500;
+  }
+}
+
+
+.footer{
+  .footer-top{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px; 
+    padding-bottom: 60px;
+    border-bottom: 1px solid #dae4e9;
+    .logo__img{
+      margin-bottom: 30px;
+    } 
+    &__contact-list{
+      width: 200px;
+    }
+    &__contact-item{
+      margin-bottom: 20px;
+    }
+    &__contact-link{
+      font-size: 14px;
+      color: $default;
+      @extend %Rubik-400;
+      margin-bottom: 20px;
+    }
+
+    &__items{
+      width: 150px;
+    }
+    &__items-newsletter{
+      width: 270px;
+    }
+    &__title{
+      font-size: 16px;
+      line-height: 21px;
+      color: #1f2044;
+      @extend %DMSans-700;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+    &__item{
+      margin-bottom: 5px;
+    }
+    &__link{
+      font-size: 14px;
+      line-height: 32px;
+      color: $default;
+      @extend %Rubik-400;
+    }    
+    &__text{
+      font-size: 14px;
+      line-height: 24px;
+      @extend %Rubik-400;
+      margin-bottom: 35px;
+    }
+    &__form-email{
+      background-color: #fef7f0;
+      font-size: 12px;
+      border: none;
+      padding: 9px 12px;
+      margin-right: -4px;
+    }
+    &__form-email::-webkit-input-placeholder{
+      color: #234969;
+    }
+    &__form-btn{
+      font-size: 14px;
+      line-height: 21px;
+      background-color: $btn;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;   
+      cursor: pointer;
+    }
+
+  }
+  &__line{
+    color: #dae4e9;
+    @extend %DMSans-400;
+  }
+  .footer-copyright{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    margin-bottom: 40px;
+    &__text{
+      font-size: 14px;
+      line-height: 32px;
+      @extend %Rubik-500;
+    }
+    &__nav-list{
+      display: flex;
+    }
+    &__nav-link{
+      font-size: 14px;
+      margin: 0 15px;      
+      color: $default;
+    }
+    .footer-copyright__nav-item + .footer-copyright__nav-item{
+      border-left: 1px solid $default;
+    }
+  }
+} 
 
 
 @import 'media';

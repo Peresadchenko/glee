@@ -1,0 +1,13 @@
+body{
+  font-size: 14px;
+  line-height: 24px;
+  color: $default;
+  @extend %Rubik-500;
+}
+
+.container{
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
