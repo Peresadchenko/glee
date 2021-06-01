@@ -11,3 +11,8 @@ body{
   padding: 0 15px;
 }
 
+.title{
+  font-size: 36px;
+  color: #191919;
+  @extend %DMSans-700;  
+}
