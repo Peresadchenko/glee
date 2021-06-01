@@ -159,7 +159,7 @@
   &__btn::before{
     content: "";
     position: absolute;
-    background-image: url('../images/arrow.png');
+    background-image: url('../images/icons/arrow.png');
     background-repeat: no-repeat;
     background-size: cover;    
     top: 21px;
@@ -208,7 +208,8 @@
       margin-bottom: 70px;
     }
     &__item{
-      padding: 50px;
+      width: 33%;
+      padding: 45px;
       display: flex;
     }
     .info__item + .info__item{
@@ -222,8 +223,7 @@
     &__content-title{
       font-size: 18px;
       line-height: 40px;
-      color: #414141;
-      @extend %DMSans-700;
+      color: #414141;      
     }
     &__content-text{
       font-size: 16px;
@@ -236,7 +236,6 @@
     margin-bottom: 40px;
     text-align: center;   
     line-height: 30px; 
-    @extend %DMSans-700;
   }
   &__filter-btn{
     display: flex;
@@ -288,7 +287,6 @@
     font-size: 16px;
     line-height: 40px;
     color: $btn;
-    @extend %DMSans-700;
   }
   &__item-box{
     display: flex;
@@ -337,12 +335,76 @@
         fill: #fff;
       }      
     }
-  }
-
-  
-
+  } 
 }
 
+
+.promo{
+  margin-bottom: 100px;
+  &__items{
+    display: flex;
+  }
+  &__item{
+    width: 50%;
+    display: flex;
+    background-color: #feefe2;
+    padding: 50px;    
+    max-height: 390px;
+  }
+  &__item + .promo__item{
+    margin-left: 30px;
+  }
+  &__item-img{
+    height: auto;
+    margin-top: -160px;
+    margin-right: 20px;
+  }
+  &__title{
+    margin-top: 50px;
+    font-size: 26px;
+    line-height: 32px;
+    color: $title__2;
+    margin-bottom: 20px;
+  }
+  &__text{
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title__2;
+    margin-bottom: 20px;
+  }
+  &__btn{
+    display: inline-block;
+    border: 1px solid #b3b7b5;
+    border-radius: 3px;
+    padding: 20px 100px 20px 20px;
+    color: #436372;
+    position: relative;
+    transition: all .3s;
+  }
+  &__btn:hover{
+    background-color: $title__2;
+    border: 1px solid  $title__2;
+    border-radius: 3px;
+    color: #fff;    
+  }
+  &__btn::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/arrow2.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    top: 28px;
+    right: 20px;
+    height: 9px;
+    width: 22px;   
+    transition: all .3s; 
+  }
+  &__btn:hover::before{
+      background-image: url('../images/icons/arrow.png');
+  }
+
+}
 
 
 
@@ -367,8 +429,11 @@
       color: $default;
       @extend %Rubik-400;
       margin-bottom: 20px;
+      transition: all .3s;
     }
-
+    &__contact-link:hover{
+      color: #1f2044;
+    }
     &__items{
       width: 150px;
     }
@@ -385,11 +450,11 @@
       text-transform: uppercase;
     }
     &__item{
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
     &__link{
       font-size: 14px;
-      line-height: 32px;
+      line-height: 20px;
       color: $default;
       @extend %Rubik-400;
       transition: all .3s;
@@ -446,8 +511,13 @@
     }
     &__nav-link{
       font-size: 14px;
+      line-height: 10px;
       margin: 0 15px;      
       color: $default;
+      transition: all .3s;
+    }
+    &__nav-link:hover{
+      color: #1f2044;
     }
     .footer-copyright__nav-item + .footer-copyright__nav-item{
       border-left: 1px solid $default;
