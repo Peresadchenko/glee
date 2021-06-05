@@ -523,8 +523,21 @@
   }
   &__add{
     font-size: 16px;
+    line-height: 18px;
     color: #262626;
     @extend %DMSans-700;
+    padding-right: 30px;
+    position: relative;
+    transition: all 0.3s;
+  }
+  &__add::after{
+    content: ">";
+      position: absolute;
+      top: 0px;
+      right: 0;
+  }
+  &__add:hover{
+    color: $default;
   }
   &__items{
     display: flex;
@@ -587,7 +600,7 @@
     color: #222933;    
     position: relative;
     margin-right: 25px;
-    padding-left: 13px;
+    padding-left: 17px;
     }
     .articles__date::before{
       content: "";
@@ -602,7 +615,7 @@
     }
     .articles__author{
       color: #222933; 
-      padding-left: 13px; 
+      padding-left: 15px; 
       position: relative;
       transition: all 0.5s;  
     }
@@ -621,9 +634,25 @@
       color: $default; 
       font-weight: 700px;
     }
-  }
-  
+  }  
+}
 
+.brands{
+  background-color: #fef7f0;
+  padding: 260px 0 90px;
+  margin-top: -295px;
+  &__list{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__item{
+    height: 90px;
+  }
+  &__img{
+    height: auto;
+    max-width: 100%;
+
+  }
 }
 
 .footer{
