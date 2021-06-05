@@ -29,3 +29,10 @@ $btn: #a3bbc8;
   font-family: 'DMSans-Regular' sans-serif;
   font-weight: 400;
 }
+
+@function max($nambers...) {
+  @return m#{a}x(#{nambers});
+}
+@function min($nambers...) {
+  @return m#{i}n(#{nambers});
+}

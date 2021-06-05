@@ -320,7 +320,7 @@
     }
     .products__item-link{    
       padding: 12px;
-      margin:0 7px;
+      margin:-1px 7px;
       border: 1px solid #fff;
       background: #fff;  
       border-radius: 50%;    
@@ -331,6 +331,7 @@
       border: 1px solid $btn;
       border-radius: 50%;
       background: $btn;
+      transform: scale(1.2); 
       path{
         fill: #fff;
       }      
@@ -447,8 +448,7 @@
   &__item:hover{
     background-color: $accent;
     border-radius: 10px;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
+    transform: scale(1.1);    
   }
   &__item-link{
     width: 100%;
@@ -478,6 +478,40 @@
   }
   &__item-img--r{
     right: 25px;
+  }
+}
+
+
+.video{  
+  margin-bottom: 120px;  
+  &__popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -620px;
+    opacity: 0.8;
+    transition: all 0.5s;
+  }
+  &__popup:hover{
+    opacity: 1;
+  }
+  &__play{
+   background-image: url("../images/icons/video-play-bg.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 98px;
+   height: 98px;   
+   transition: all 0.2s;
+  }  
+  &__play:hover{
+    background-image: url("../images/icons/video-play-bg-hover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 127px;
+   height: 127px; 
   }
 }
 
@@ -541,6 +575,9 @@
       line-height: 24px;
       @extend %Rubik-400;
       margin-bottom: 35px;
+    }
+    &__form{
+      display: flex;
     }
     &__form-email{
       background-color: #fef7f0;
