@@ -345,6 +345,7 @@
       border: 1px solid $btn;
       border-radius: 50%;
       background: $btn;
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.5);
       transform: scale(1.2); 
       path{
         fill: #fff;
@@ -464,7 +465,8 @@
   &__item:hover{
     background-color: $accent;
     border-radius: 10px;
-    transform: scale(1.1);    
+    transform: scale(1.1);  
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.5);  
   }
   &__item-link{
     width: 100%;
@@ -569,6 +571,7 @@
   }  
   &__item:hover{
     transform: scale(1.1); 
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.5);
   }
   &__img{
     width: 100%;
