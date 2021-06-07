@@ -21,3 +21,32 @@ body{
   color: #191919;
   @extend %DMSans-700;  
 }
+
+.breadcrumbs{
+  .breadcrumbs__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    color: #222933;
+    padding-right: 20px;
+    @extend %Rubik-400;
+    position: relative;
+    &::after{
+      content: "/";
+      position: absolute;
+      top: 0;
+      right: 6px;
+      color: #8b8f94;
+    }
+    &:last-child{
+      padding-right: 0px;
+      &::after{
+        display: none;        
+      }
+    }
+  }
+  &__link{
+    color: #8b8f94;
+  }
+}
