@@ -42,20 +42,24 @@
       position: relative;
     }
     &__link-img{
-      margin-right: 1px;
       width: 18px;
-      height: 16px;
+      height: 18px;
     }
     &__link-magnifier{
       border: 1px solid #edf1f4;
       background-color: #edf1f4;
       border-radius: 50%;
       padding: 15px;
+      padding-bottom: 8px;
       margin-right: 20px;
-      transition: all .3s;
+      transition: all .5s;
     }  
     &__link-magnifier:hover{
-      background-color: #fcd7b6;
+      background-color: $title__2;
+      transition: all .5s;
+      path{
+        fill: #fff;
+      }
     }
     &__link-heartCart{
       display: flex;
@@ -64,11 +68,15 @@
       border-radius: 30px;
       padding: 0px 40px;
       align-items: center;
-      transition: all .3s;
+      transition: all .5s;
     }
     &__link-heartCart:hover{
-      border: 1px solid #edf1f4;
-      background-color: #edf1f4;
+      border: 1px solid $title__2;
+      background-color: $title__2;
+      transition: all .5s;
+      path{
+        fill: #fff;
+      }
     }
     &__line{
       color: #fff;
@@ -77,29 +85,30 @@
       padding: 5px 0px;
     }
     &__link-heart{
-      margin-right: 25px;
-      margin-top: 9px;
+      margin-right: 28px;
+      margin-top: 14px;
     }  
     &__link-cart{
-      margin-left: 27px;
-      margin-top: 10px;
+      margin-left: 28px;
+      margin-top: 14px;
     }
     &__link-menu{
       border: 1px solid $btn;
       background-color: $btn;
       border-radius: 50%;
       padding: 15px;
+      padding-bottom: 0;
       margin-left: 20px;
       transition: all .3s;
     }
     &__link-menu:hover{
-      border: 1px solid #fcd7b6;
-      background-color: #fcd7b6;
+      border: 1px solid $title__2;
+      background-color: $title__2;       
     }
     &__nam{
       position: absolute;
       width: 16px;
-      height: 16px;
+      height: 15px;
       top: -8px;
       right: -8px;
       text-align: center;
@@ -115,13 +124,13 @@
   }
 }
 
-.login{
+.login{  
   &__top{
     height: 125px;
     background-color: #edf1f4;
     text-align: center;
     padding: 35px 0;
-    margin-bottom: 117px;
+    margin-bottom: 113px;
   }
   &__title{
     font-size: 35px;
@@ -211,17 +220,28 @@
 
 .terms-conditions{  
   &__inner{
-  margin-bottom: 136px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 115px;
+  padding-left: 15px;
   }
   .terms-conditions__list{
     margin-bottom: 55px;
+  }
+  &__content{
+    .terms-conditions__title{
+      margin-bottom: 12px;
+    }
+    .terms-conditions__text{
+      margin-bottom: 54px;
+    }
   }
   &__title{
     font-size: 24px;
     line-height: 40px;
     color: $title__2;
     @extend %Rubik-500;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
   &__text{
     padding-left: 8px;
@@ -361,11 +381,7 @@
     &__item-centre{
       border-left: 1px solid #e8e4df;
       border-right: 1px solid #e8e4df;
-    }
-    // &__item-img{
-    //   height: 50px;
-    // }
-
+    }    
     &__content{
       position: relative;      
       padding-left: 70px;
@@ -426,7 +442,7 @@
     }
   }
   &__title{
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     text-align: center;   
     line-height: 30px; 
   }
@@ -554,30 +570,27 @@
     max-height: 390px;
   }
   &__item + .promo__item{
-    margin-left: 30px;
+    margin-left: 53px;
   }
   &__item-img{
     height: auto;
     margin-top: -164px;
-    margin-right: 20px;
+    margin-right: 19px;
   }
   &__item-content-2{
-    margin-left: 53px;
+    margin-left: 44px;
     margin-top: -14px;
     .promo__title{
-      margin-bottom: 11px;
+      margin-bottom: 9px;
     }
     .promo__text{
-      margin-bottom: 26px;
-    }
-    .promo__btn{
-      padding: 17px 91px 17px 22px;
+      margin-bottom: 28px;
     }
   }
   &__title{
     max-width: 345px;
     margin-top: 34px;
-    margin-bottom: 17px;
+    margin-bottom: 14px;
     font-size: 26px;
     line-height: 32px;
     color: $title__2;    
@@ -587,13 +600,13 @@
     font-size: 16px;
     line-height: 30px;
     color: $title__2;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   }
   &__btn{
     display: inline-block;
     border: 1px solid #b3b7b5;
     border-radius: 3px;
-    padding: 20px 90px 20px 20px;
+    padding: 16px 90px 16px 20px;
     color: #436372;
     position: relative;
     transition: all .3s;
@@ -610,7 +623,7 @@
     background-image: url('../images/icons/arrow2.png');
     background-repeat: no-repeat;
     background-size: cover;    
-    top: 28px;
+    top: 24px;
     right: 20px;
     height: 9px;
     width: 22px;   
@@ -625,7 +638,7 @@
 .design{
   &__title{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     line-height: 30px;
   }
   &__filter-btn{
@@ -744,14 +757,15 @@
     line-height: 18px;
     color: #262626;
     @extend %DMSans-700;
-    padding-right: 30px;
+    padding-top: 7px;
+    padding-right: 25px;
     position: relative;
     transition: all 0.3s;
   }
   &__add::after{
     content: ">";
       position: absolute;
-      top: 0px;
+      top: 7px;
       right: 0;
   }
   &__add:hover{
@@ -817,7 +831,7 @@
   &__info{
     display: flex;
     border-top: 1px solid #e0e0e0;
-    padding-top: 15px;
+    padding-top: 12px;
     @extend %Rubik-400;
     font-size: 12px;
     line-height: 30px;    
@@ -987,7 +1001,7 @@
       line-height: 14px;
       color: #1f2044;
       @extend %DMSans-700;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       margin-top: 20px;
       text-transform: uppercase;
     }
@@ -1008,7 +1022,7 @@
       font-size: 14px;
       line-height: 24px;
       @extend %Rubik-400;
-      margin-bottom: 32px;
+      margin-bottom: 33px;
     }
     &__form{
       display: flex;
