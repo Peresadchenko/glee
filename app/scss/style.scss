@@ -121,6 +121,7 @@
     background-color: #edf1f4;
     text-align: center;
     padding: 35px 0;
+    margin-bottom: 117px;
   }
   &__title{
     font-size: 35px;
@@ -132,7 +133,6 @@
   &__reg{
     max-width: 470px;
     margin: 0 auto 85px;
-    padding-top: 117px;
   }
   &__label{
     color: #436372;
@@ -206,6 +206,33 @@
     border: 1px solid $title__2;
     background-color: $title__2;
     color: #fff;
+  }
+}
+
+.terms-conditions{  
+  &__inner{
+  margin-bottom: 136px;
+  }
+  .terms-conditions__list{
+    margin-bottom: 55px;
+  }
+  &__title{
+    font-size: 24px;
+    line-height: 40px;
+    color: $title__2;
+    @extend %Rubik-500;
+    margin-bottom: 21px;
+  }
+  &__text{
+    padding-left: 8px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title__2;
+    @extend %Rubik-400;
+    margin-bottom: 20px;    
+  }
+  &__item{
+    margin-left: 34px;
   }
 }
 
@@ -320,25 +347,76 @@
     &__wraper{
       display: flex;
       justify-content: space-between;
-      margin-bottom: 87px;
+      margin-bottom: 76px;
     }
     &__item{
-      width: 33%;
-      padding: 45px;
+      width: 33.3%;
+      height: 170px;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
     }
-    .info__item + .info__item{
-      border-left: 1px solid #e8e4df;      
+    &__item-centre{
+      border-left: 1px solid #e8e4df;
+      border-right: 1px solid #e8e4df;
     }
-    &__item-img{
+    // &__item-img{
+    //   height: 50px;
+    // }
+
+    &__content{
+      position: relative;      
+      padding-left: 70px;
+    }
+    &__content-support{
+      margin-left: 5px;
+      margin-top: 4px;
+      width: 285px;
+    }
+    &__content-support::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/support.png');
+      background-repeat: no-repeat;
+      background-size: cover; 
       height: 50px;
-      margin-right: 25px;
-      margin-top: 8px;
+      width: 50px;
+      left: -7px;
+      top: 14px;
     }
+    &__content-payment{
+      width: 210px;
+      padding-left: 0px;
+      margin-left: 83px;
+    }
+    &__content-payment::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/payment.png');
+      background-repeat: no-repeat;
+      background-size: cover; 
+      height: 50px;
+      width: 50px;
+      left: -86px;
+      top: 14px;
+    }    
+    &__content-delivery::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/delivery.png');
+      background-repeat: no-repeat;
+      background-size: cover; 
+      height: 50px;
+      width: 50px;
+      left: -7px;
+      top: 0px;
+    }    
     &__content-title{
       font-size: 18px;
       line-height: 40px;
-      color: #414141;      
+      color: #414141;        
     }
     &__content-text{
       font-size: 16px;
@@ -390,22 +468,27 @@
   &__item-img{
     margin: auto;  
     max-height: 195px;
-  }
+  }  
   &__item-title{
     @extend %DMSans-500;
     font-size: 16px;
     line-height: 40px;
-    color: $title__2;    
+    color: $title__2;   
+    margin-bottom: -10px; 
   }
   &__item-price{
     font-size: 16px;
     line-height: 40px;
     color: $btn;
+    margin-bottom: 22px;
   }
   &__item-box{
     display: flex;
     flex-direction: column;
-    padding: 30px 15px 35px;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
     height: 100%;
     text-align: center;
     position: relative;     
@@ -481,6 +564,15 @@
   &__item-content-2{
     margin-left: 53px;
     margin-top: -14px;
+    .promo__title{
+      margin-bottom: 11px;
+    }
+    .promo__text{
+      margin-bottom: 26px;
+    }
+    .promo__btn{
+      padding: 17px 91px 17px 22px;
+    }
   }
   &__title{
     max-width: 345px;
@@ -704,8 +796,14 @@
     background-color: $btn;
     padding: 10px 30px ;
     border-radius: 20px;
+    cursor: pointer;
     text-transform: uppercase;
+    transition: all 0.3s;
   }  
+  &__news:hover{
+    border: 1px solid $title__2;
+    background-color: $title__2;
+  }
   &__link{
     font-size: 18px;
     line-height: 18px;
@@ -917,10 +1015,13 @@
     }
     &__form-email{
       background-color: #fef7f0;
-      font-size: 12px;
+      font-size: 14px;
       border: none;
-      padding: 9px 12px;
-      margin-right: -4px;
+      padding: 8px 10px;
+      width: 170px;
+      padding-right: 10px;
+      margin-right: 10px;
+      outline: none;
     }
     &__form-email::-webkit-input-placeholder{
       color: #234969;
