@@ -118,8 +118,7 @@
       color: $title__2;      
       border: 1px solid #fff; 
       border-radius: 50%;
-      background-color: #fff;
-      
+      background-color: #fff;      
     }
   }
 }
@@ -339,7 +338,7 @@
     background-image: url('../images/icons/arrow.png');
     background-repeat: no-repeat;
     background-size: cover;    
-    top: 15px;
+    top: 17px;
     right: 20px;
     height: 8px;
     width: 20px;    
@@ -398,7 +397,7 @@
   }
 }
 
-.login{  
+.page{
   &__top{
     height: 125px;
     background-color: #edf1f4;
@@ -413,6 +412,9 @@
     @extend %Rubik-300;
     margin-bottom: 15px;
   }
+}
+
+.login{    
   &__reg{
     max-width: 470px;
     margin: 0 auto 85px;
@@ -527,6 +529,170 @@
   }
   &__item{
     margin-left: 34px;
+  }
+}
+
+.product{
+  margin-bottom: 120px;
+  &__inner{
+    display: flex;
+  }
+  &__filters{
+    width: 270px;
+    margin-right: 30px;
+  }
+  &__content{
+    max-width: 890px;    
+  } 
+  &__items{    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+    .products__item{
+      width: calc(100% / 3 - 30px);
+    }
+  }
+}
+
+.filter-category{
+  margin-bottom: 50px;
+  &__label{
+    display: flex;
+    flex-direction: column;
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #fff;
+    background-color: #fff; 
+    padding: 15px 20px 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  &__checkbox:hover{
+    color: $btn;
+  }
+  &__input{
+    @extend %checkbox-hidden;     
+    &:checked + .filter-category__checkbox{
+      border: 1px solid #edf1f4;
+      background-color: #edf1f4;      
+    }    
+  }  
+}
+
+.filter-price{  
+  margin-bottom: 80px;
+  &__label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    @extend %Rubik-400;
+    color: $title__2;
+  }  
+  &__span{
+    margin-top: 15px;    
+  }
+  .irs--flat .irs-line {
+    top: 6px;
+    height: 3px;
+    background-color: #c2d2db;
+    border: 1px solid #dfe7ec;
+    border-radius: 5px;
+  }
+  .irs--flat .irs-handle {
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background-color: $btn;
+  }
+  .irs--flat {
+    height: 15px;
+  }
+  .irs--flat .irs-bar {
+    top: 6px;
+    height: 4px;
+    border: 1px solid #dfe7ec;
+    background-color: #c2d2db;
+  }
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
+  .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+    display: none;
+  }
+  .irs--flat .irs-min, .irs--flat .irs-max {
+    display: none;
+  }
+}
+
+.filter-brand{
+  margin-bottom: 65px;
+  &__item-number{
+    color: #b3b3b3;
+  }
+  &__checkbox{    
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #fff;
+    background-color: #fff; 
+    padding: 15px 20px 15px 15px;
+    border-radius: 5px;
+    color: $title__2;
+    cursor: pointer;
+    transition: all .5s;
+    @extend %Rubik-400;
+  }
+  &__checkbox:hover{
+    color: $btn;
+  }
+  &__input{
+    @extend %checkbox-hidden;    
+    &:checked + .filter-brand__checkbox{
+      border: 1px solid #edf1f4;
+      background-color: #edf1f4;
+      .filter-brand__item-number{
+        color: $title__2;
+      }
+    }    
+  }   
+}
+
+.recent{  
+  &__box{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__border{
+    border: 1px solid #f2f2f2;    
+    margin-right: 20px;
+    width: 70px;
+    box-shadow: 0px 0px 8px 1px rgba(37,37,37,0.06);
+  }
+  &__img{
+    margin: 3px auto;
+  }
+  &__title{
+    font-size: 14px;
+    color: #333333;
+    line-height: 15px;
+    @extend %Rubik-400;
+    margin-bottom: 10px;
+    transition: all .5s;
+    &:hover{
+      color: $btn;
+    }
+  }
+  .star{
+    margin-bottom: 12px;
+  }
+  &__price{
+    font-size: 15px;
+    color: #333333;
+    line-height: 27px;
+    @extend %Rubik-400;
   }
 }
 
@@ -668,7 +834,7 @@
     &__content-support::before{
       content: "";
       position: absolute;
-      background-image: url('../images/support.png');
+      background-image: url('../images/icons/support.png');
       background-repeat: no-repeat;
       background-size: cover; 
       height: 50px;
@@ -684,7 +850,7 @@
     &__content-payment::before{
       content: "";
       position: absolute;
-      background-image: url('../images/payment.png');
+      background-image: url('../images/icons/payment.png');
       background-repeat: no-repeat;
       background-size: cover; 
       height: 50px;
@@ -695,7 +861,7 @@
     &__content-delivery::before{
       content: "";
       position: absolute;
-      background-image: url('../images/delivery.png');
+      background-image: url('../images/icons/delivery.png');
       background-repeat: no-repeat;
       background-size: cover; 
       height: 50px;
@@ -899,8 +1065,8 @@
     background-size: cover;    
     top: 24px;
     right: 20px;
-    height: 9px;
-    width: 40px;   
+    height: 10px;
+    width: 25px;   
     transition: all .3s; 
   }
   &__btn:hover::before{
@@ -996,7 +1162,7 @@
     min-height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center -750px;
+    background-position: center center;
     opacity: 0.8;
     transition: all 0.5s;
   }

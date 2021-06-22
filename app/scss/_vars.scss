@@ -35,6 +35,14 @@ $btn: #a3bbc8;
   font-weight: 400;
 }
 
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 @function max($nambers...) {
   @return m#{a}x(#{nambers});
 }
