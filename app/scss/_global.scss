@@ -28,7 +28,7 @@ body{
   @extend %DMSans-700;
   color: $title__2;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 .filter__title::before{
   content: "";
@@ -80,7 +80,7 @@ body{
   .pagination__list{
     display: flex;
     align-items: center;
-  }
+  }  
   &__item{
     margin-right: 15px;
   }
@@ -88,12 +88,20 @@ body{
     font-size: 16px;
     line-height: 30px;
     color: $title__2;
-    border: 1px solid #a3bbc8;
+    border: 1px solid $btn;
     padding: 20px 23px;  
+    transition: all .5s;
+  }
+  &__link:hover{
+    color: $btn;
   }
   &__link--active{
     color: #fff;
     background-color: $btn;
+  }
+  &__link--active:hover{
+    color: $title__2;
+    background-color: #fff;
   }
   &__next{
     font-size: 16px;
@@ -102,5 +110,15 @@ body{
     border: 1px solid #a3bbc8;
     padding: 20px 23px;
     margin-right: 15px;
+    transition: all .5s;
+  }
+  &__next:hover{
+    color: $btn;
   }
 }
+.pagination--list{
+ display: flex;
+ justify-content: flex-start;
+ margin-top: 80px;
+ margin-left: 45px;
+} 
