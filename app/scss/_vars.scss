@@ -35,6 +35,19 @@ $btn: #a3bbc8;
   font-weight: 400;
 }
 
+%btn{
+  display: inline-block;
+  border: 1px solid #a3bbc8;
+  background-color: #a3bbc8;
+  font-size: 15px;
+  line-height: 12px;
+  padding: 16px 50px 16px 20px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  transition: all .5s;
+}
+
 %checkbox-hidden{
   width: 1px;
   height: 1px;
