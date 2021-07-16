@@ -67,8 +67,7 @@ $(function(){
     ratedFill: "#ffcc00",
     readOnly: true
   });
-
-
+ 
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,

@@ -2146,8 +2146,7 @@
   }  
 }
 
-.comments-form{
-  
+.comments-form{  
   &__textbox{
     display: flex;
     justify-content: space-between;
@@ -2170,7 +2169,7 @@
   &__input-name::before{
     content: "";
     position: absolute;
-    background-image: url(../images/icons/form-name.png);  
+    background-image: url(../images/icons/form-name.svg);  
     background-repeat: no-repeat;
     background-size: cover;   
     width: 16px;
@@ -2185,7 +2184,7 @@
   &__input-mail::before{
     content: "";
     position: absolute;
-    background-image: url(../images/icons/form-email.png);  
+    background-image: url(../images/icons/form-email.svg);  
     background-repeat: no-repeat;
     background-size: cover;   
     width: 20px;
@@ -2200,7 +2199,7 @@
   &__textarea-wraper::before{
     content: "";
     position: absolute;
-    background-image: url(../images/icons/form-textarea.png);  
+    background-image: url(../images/icons/form-textarea.svg);  
     background-repeat: no-repeat;
     background-size: cover;   
     width: 20px;
@@ -2234,6 +2233,164 @@
     border-radius: 3px;
   }
 }
+
+.contact{
+  &__title-text{
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    @extend %DMSans-700;
+    color: $btn;
+    margin-bottom: 20px;
+  }
+   &__title{
+    text-align: center;
+    font-size: 35px;
+    @extend %DMSans-700;
+    color: #436372;
+    margin-bottom: 150px;
+  }
+  &__top{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+  }
+  &__top-item{
+    width: 375px;
+    text-align: center;
+    margin-right: 30px;
+    border: 3px solid transparent;
+    padding: 70px 30px 75px;
+    transition: all .5s;
+  }
+  &__top-item:hover{
+    border: 3px solid $btn;
+    padding: 70px 30px 75px;
+    .contact__top-img{
+      background-color: $btn;
+       path{
+        fill: rgb(255, 255, 255);
+      }
+    } 
+  }
+  &__top-img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 65px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 16px 20px;
+    box-shadow: 0px 0px 50px 10px rgba(202, 202, 202, 0.6);
+  }
+  &__top-title{
+    font-size: 20px;
+    line-height: 26px;
+    @extend %DMSans-700;
+    color: #222222;
+    margin-bottom: 25px;
+  }
+  &__top-text{
+    font-size: 16px;
+    line-height: 30px;
+    @extend %Rubik-400;
+    color: #565872;
+    transition: all .5s;
+  }
+  &__top-text:hover{
+    color: $btn;
+  }
+  &__form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+    #map {
+      width: 500px;
+      height: 335px;
+    }    
+  }
+  &__textbox{
+    display: flex;
+  }
+   &__input{
+    width: 300px;
+    height: 50px;
+    border: none;
+    background-color: #fafafa;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 25px 20px;
+    color: #565872;
+    text-transform: uppercase;
+  }
+  &__textarea{
+    width: 620px;
+    height: 175px;
+    border: none;
+    background-color: #fafafa;
+    margin-bottom: 30px;
+    padding: 25px 20px;
+    resize: none;
+  }
+  &__input-name{
+    position: relative;
+  }
+  &__input-name::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/icons/form-name.svg);  
+    background-repeat: no-repeat;
+    background-size: cover;   
+    width: 16px;
+    height: 16px;
+    top: 17px;
+    right: 40px;
+    z-index: 10;
+  }
+  &__input-mail{
+    position: relative;
+  }
+  &__input-mail::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/icons/form-email.svg);  
+    background-repeat: no-repeat;
+    background-size: cover;   
+    width: 20px;
+    height: 14px;
+    top: 18px;
+    right: 40px;
+    z-index: 11;
+  }
+  &__textarea-wraper{
+    position: relative;
+  }
+  &__textarea-wraper::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/icons/form-textarea.svg);  
+    background-repeat: no-repeat;
+    background-size: cover;   
+    width: 20px;
+    height: 16px;
+    top: 22px;
+    right: 40px;
+    z-index: 10;
+  }
+ 
+  &__btn{
+    @extend %btn;
+    border-radius: 5px;
+    padding: 18px 45px;
+    text-transform: uppercase;    
+    transition: all .5s;
+  }
+  &__btn:hover{
+    background-color: $title__2;
+  }
+
+}
+
 
 .footer{
   .footer-top{
