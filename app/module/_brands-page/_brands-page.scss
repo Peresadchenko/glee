@@ -1,0 +1,22 @@
+.brands-page{
+  height: 250px;
+  background-color: #fef7f0;
+  padding: 75px 0px;
+  margin-bottom: 70px;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    height: 90px;
+    &:last-child{
+      padding-right: 42px;
+    }
+  }
+  &__img{
+    height: auto;
+    max-width: 100%;    
+  }
+}

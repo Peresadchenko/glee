@@ -1,0 +1,32 @@
+.video{  
+  margin-bottom: 120px;  
+  &__popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.8;
+    transition: all 0.5s;
+  }
+  &__popup:hover{
+    opacity: 1;
+  }
+  &__play{
+   background-image: url("../images/icons/video-play-bg.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 98px;
+   height: 98px;   
+   transition: all 0.2s;
+  }  
+  &__play:hover{
+    background-image: url("../images/icons/video-play-bg-hover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 127px;
+    height: 127px; 
+  }
+}

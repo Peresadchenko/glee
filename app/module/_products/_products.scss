@@ -1,0 +1,193 @@
+.products{
+  .info{
+    height: 170pxs;
+    background-color: #fef7f0;
+    &__wraper{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 76px;
+    }
+    &__item{
+      width: 33.3%;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;      
+    }
+    &__item-centre{
+      border-left: 1px solid #e8e4df;
+      border-right: 1px solid #e8e4df;
+    }    
+    &__content{
+      position: relative;      
+      padding-left: 70px;
+    }
+    &__content-support{
+      margin-left: 5px;
+      margin-top: 4px;
+      width: 285px;
+    }
+    &__content-support::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/support.png');
+      background-repeat: no-repeat;
+      background-size: cover; 
+      height: 50px;
+      width: 50px;
+      left: -7px;
+      top: 14px;
+    }
+    &__content-payment{
+      width: 210px;
+      padding-left: 0px;
+      margin-left: 83px;
+    }
+    &__content-payment::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/payment.png');
+      background-repeat: no-repeat;
+      background-size: cover; 
+      height: 50px;
+      width: 50px;
+      left: -86px;
+      top: 14px;
+    }    
+    &__content-delivery::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/delivery.png');
+      background-repeat: no-repeat;
+      background-size: cover; 
+      height: 50px;
+      width: 50px;
+      left: -7px;
+      top: 0px;
+    }    
+    &__content-title{
+      font-size: 18px;
+      line-height: 40px;
+      color: #414141;        
+    }
+    &__content-text{
+      font-size: 16px;
+      line-height: 30px;
+      color: #585858;
+      @extend %DMSans-400;
+    }
+  }
+  &__title{
+    margin-bottom: 31px;
+    text-align: center;   
+    line-height: 30px; 
+  }
+  &__filter-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  &__btn{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @extend %DMSans-400;
+    font-size: 16px;
+    color: #8b8b8b;
+    cursor: pointer;    
+  }
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
+  .products__btn + .products__btn{
+    margin-left: 30px;
+  }
+  &__items{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 145px;
+  }
+  &__item{
+    width: calc(100% / 4 - 30px);
+    height: 375px;
+    background-color: #fff;
+    margin: 0 15px 40px;    
+    box-shadow: 0 6px 47px 3px rgba(37,37,37,0.07);
+    border-radius: 10px;
+  }
+  &__item-img{
+    margin: auto;  
+    max-height: 195px;
+  }  
+  &__item-title{
+    @extend %DMSans-500;
+    font-size: 16px;
+    line-height: 40px;
+    color: $title__2;   
+    margin-bottom: -10px; 
+  }
+  &__item-price{
+    font-size: 16px;
+    line-height: 40px;
+    color: $btn;
+    margin-bottom: 22px;
+  }
+  &__item-box{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 100%;
+    text-align: center;
+    position: relative;     
+    overflow: hidden;    
+    .products__item-links{
+      display: flex;
+      position: absolute;  
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;    
+      svg{
+        width: 18px;
+        height: 18px;
+        display: block;
+      }       
+    }        
+  }
+  
+  &__item-box:hover{
+    .products__item-links{
+      display: flex;
+      position: absolute; 
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;  
+    }
+    .products__item-link{    
+      padding: 12px;
+      margin:-1px 7px;
+      border: 1px solid #fff;
+      background: #fff;  
+      border-radius: 50%;    
+      transition: all .3s;
+    }
+    .products__item-link:hover{
+      height: 100%;
+      border: 1px solid $btn;
+      border-radius: 50%;
+      background: $btn;
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.5);
+      transform: scale(1.2); 
+      path{
+        fill: #fff;
+      }      
+    }
+  } 
+}

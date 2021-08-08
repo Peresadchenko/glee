@@ -1,0 +1,168 @@
+.about-us{
+  &__top{
+    display: flex;
+    margin-bottom: 120px;
+  }  
+  &__img{
+    width: 100%;
+    margin: 10px 45px 0 -2px;
+  }
+  &__content-box{
+    display: flex;
+    margin: 126px 0 43px 8px;
+    .content-box__number{
+      font-size: 140px;
+      line-height: 32px;
+      color: $btn;
+      @extend %DMSans-700;
+    }
+    .content-box__items{
+      margin-left: 28px;
+      margin-top: -12px;
+    }
+    .content-box__text{
+      font-size: 16px;
+      color: $title__2;
+      margin-bottom: 5px;
+      @extend %Rubik-400;
+    }
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 35px;
+    @extend %DMSans-700;
+    color: $title__2;
+    margin-bottom: 38px;
+    margin-left: 2px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    color: $title__2;
+    @extend %Rubik-400;
+    margin-bottom: 62px;
+  }
+  &__line{
+    width: 500px;
+    margin-left: 5px;
+    border: 1px solid #e6eaf0;
+  }  
+  &__info{
+    display: flex;
+    justify-content: space-between;    
+    max-width: 527px;
+  }
+  &__info-item{
+    position: relative;
+    padding-left: 60px;
+    margin-top: 26px;
+    .info-item__number{
+      font-size: 36px;
+      line-height: 38px;
+      color: $title__2;
+      margin-bottom: 3px;
+      @extend %DMSans-700;
+    }
+    .info-item__text{
+      font-size: 16px;
+      line-height: 17px;
+      color: #4c4c4c;
+      @extend %DMSans-700;
+    }
+  }  
+  &__info-projects::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/projects.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    top: 5px;
+    left: 0px;
+    height: 40px;
+    width: 40px;   
+  }
+  &__info-revenue::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/revenue.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    top: 5px;
+    left: 0px;
+    height: 40px;
+    width: 40px;   
+  }
+  &__info-awards::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/awards.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    top: 5px;
+    left: 0px;
+    height: 40px;
+    width: 40px;    
+  }
+  &__statistics{
+    background-color: $accent;   
+    margin-bottom: 125px; 
+  }
+  &__statistics-items{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 93px;
+    height: 320px;    
+    .about-us__statistics-item{
+      position: relative;
+      text-align: center;
+    }
+    .statistics-item__clients{
+      margin-left: 40px;
+      .statistics-item__img{
+        top: -80px;
+        left: 55px;
+      }
+    }
+    .statistics-item__products{
+      margin-left: -22px;
+      .statistics-item__img{
+        top: -72px;
+        left: 44px;
+      }      
+    }
+    .statistics-item__time{
+      margin-right: 0px;
+       .statistics-item__img{
+        top: -84px;
+        left: 42px;
+      }
+    }
+    .statistics-item__brands{  
+      margin-right: 66px;
+       .statistics-item__img{
+        top: -84px;
+        left: 38px;
+      }
+    }    
+    .statistics-item__img{
+      position: absolute;
+      margin-bottom: 30px;
+      top: 0;
+      left: 0;
+    }
+    .statistics-item__number{
+      font-size: 36px;
+      line-height: 32px;
+      @extend %DMSans-700;
+      color: $title__2;
+      margin-bottom: 13px;
+    }
+    .statistics-item__text{
+      font-size: 18px;
+      line-height: 32px;
+      @extend %DMSans-700;
+      color: $title__2;
+    }
+  }  
+}

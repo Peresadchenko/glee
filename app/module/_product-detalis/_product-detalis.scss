@@ -1,0 +1,315 @@
+.product-detalis{
+  margin-bottom: 110px;
+  &__inner{
+    display: flex;
+  }
+  .product-slide{
+    display: flex;
+    width: 550px;
+    margin-right: 70px;
+    &__thumb{
+      width: 140px;
+      margin-right: 25px;
+    }
+    &__thumb-item{
+      margin-bottom: 15px;
+      width: 140px;
+      height: 160px;
+      cursor: pointer;
+      img{
+        width: 140px;
+        height: 160px;
+        object-fit: contain;   
+        border: 2px solid #f2f2f2;     
+      }
+    }
+    &__big{
+      width: 385px;
+      height: 530px;      
+      img{
+        width: 385px;
+        height: 530px;
+        padding: 60px;
+        object-fit: contain; 
+        border: 2px solid #f2f2f2;      
+      }
+    }
+  }
+  &__content{
+    width: 550px;
+  }
+  &__content-title{
+    @extend %Rubik-400;
+    font-size: 40px;
+    color: #333333;
+    margin: 30px 0 25px;
+  }
+  &__content-star{
+    margin-bottom: 22px;
+  }
+  &__content-price{
+    @extend %Rubik-400;
+    font-size: 30px;
+    color: #333333;
+  }
+  &__content-text{
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title__2;
+    margin: 30px 0 35px;
+  }
+  &__content-form{
+    margin-bottom: 60px;
+  }
+  &__content-btn{
+    @extend %btn;
+    border-radius: 5px;
+    padding: 18px 50px;    
+    margin-left: 15px;
+    text-transform: uppercase;
+  }
+  &__content-btn:hover{
+    background-color: $title__2;
+  }
+  &__info-item{
+    display: flex;
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title__2;
+  }
+  &__info-title{
+    margin-right: 5px;    
+  }
+  &__info-link{
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title__2;
+    transition: all .5s;
+  }
+  &__info-link:hover{
+    color: $btn;
+  }
+
+  .jq-number__field {
+    width: 100px;
+    border: 1px solid $btn;  
+  }
+  .jq-number__field input {
+    width: 100%;
+    padding: 12px 9px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 15px;
+    @extend %Rubik-400;
+    color: #333333;
+    text-align: center;
+  }
+  .jq-number{
+    padding: 0;
+    position: relative;  
+  }
+  .jq-number__spin {
+    cursor: pointer;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .jq-number__spin.minus{
+    left: 8px;
+  }
+  .jq-number__spin.plus{
+    right: 20px;
+  }
+  .jq-number__spin::after{
+    content: '';
+    position: absolute;  
+    top: 4px;
+    left: 6px;
+    width: 9px;
+    height: 1px;
+    background-color: $title__2;
+  }
+  .jq-number__spin.plus::before{
+    content: '';
+    position: absolute;  
+    top: 0;
+    left: 10px;
+    width: 1px;
+    height: 9px;
+    background-color: $title__2;
+  }
+  .jq-number::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 33px;
+    width: 1px;
+    height: 49px;
+    background-color: #a3bbc8;
+  }
+  .jq-number::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 33px;
+    width: 1px;
+    height: 49px;
+    background-color: #a3bbc8;
+  }
+  
+  &__tabs{
+    margin-top: 80px;
+    margin-bottom: 125px;
+  }
+  &__tabs-top{
+    margin-bottom: 40px;   
+    text-align: center; 
+  }
+  &__top-item{
+    margin-right: 13px;
+    @extend %btn;
+    @extend %Rubik-500;
+    background-color: #edf1f4;
+    border: 1px solid #edf1f4;
+    color: $title__2;
+    font-size: 18px;
+    width: 240px;
+    height: 55px;
+    padding: 20px 0;
+    border-radius: 5px;
+  }
+  &__top-item:hover{
+    background-color: $title__2;
+    color: #fff;
+  }
+  &__top-item--active{
+    background-color: $btn;
+    color: #fff;    
+  }
+  &__box-item{
+    display: none;
+    &.product-detalis__box-item--active{
+      display: block;
+    }
+  }
+  &__box-text{
+    font-size: 16px;
+    line-height: 30px;
+    color: $title__2;
+    @extend %Rubik-400;
+  }
+  &__slider-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }  
+  &__slider-title{
+    font-size: 36px;
+    @extend %DMSans-700;
+    color: $title__2;
+  }
+  &__slider-btn{
+    border: 2px solid #edf1f4;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  &__slider-btn:hover{
+    border: 2px solid $btn;
+  }
+  &__slider-inner{
+    .products__item{
+      margin: 0 3px 40px;
+    }
+  }  
+}
+.products{  
+  &__item{
+    width: calc(100% / 4 - 30px);
+    height: 375px;
+    background-color: #fff;
+    margin: 0 15px 40px;    
+    box-shadow: 0 6px 47px 3px rgba(37,37,37,0.07);
+    border-radius: 10px;
+  }
+  &__item-img{
+    margin: auto;  
+    max-height: 195px;
+  }  
+  &__item-title{
+    @extend %DMSans-500;
+    font-size: 16px;
+    line-height: 40px;
+    color: $title__2;   
+    margin-bottom: -10px; 
+  }
+  &__item-price{
+    font-size: 16px;
+    line-height: 40px;
+    color: $btn;
+    margin-bottom: 22px;
+  }
+  &__item-box{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 100%;
+    text-align: center;
+    position: relative;     
+    overflow: hidden;    
+    .products__item-links{
+      display: flex;
+      position: absolute;  
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;    
+      svg{
+        width: 18px;
+        height: 18px;
+        display: block;
+      }       
+    }        
+  }  
+  &__item-box:hover{
+    .products__item-links{
+      display: flex;
+      position: absolute; 
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;  
+    }
+    .products__item-link{    
+      padding: 12px;
+      margin:-1px 7px;
+      border: 1px solid #fff;
+      background: #fff;  
+      border-radius: 50%;    
+      transition: all .3s;
+    }
+    .products__item-link:hover{
+      height: 100%;
+      border: 1px solid $btn;
+      border-radius: 50%;
+      background: $btn;
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.5);
+      transform: scale(1.2); 
+      path{
+        fill: #fff;
+      }      
+    }
+  } 
+}

@@ -1,0 +1,130 @@
+.articles{
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+  }
+  &__add{
+    font-size: 16px;
+    line-height: 18px;
+    color: #262626;
+    @extend %DMSans-700;
+    padding-top: 7px;
+    padding-right: 25px;
+    position: relative;
+    transition: all 0.3s;
+  }
+  &__add::after{
+    content: ">";
+      position: absolute;
+      top: 7px;
+      right: 0;
+  }
+  &__add:hover{
+    color: $default;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 120px;
+  }
+  &__item{
+    width: calc(100% / 3 - 20px);  
+    height: 425px;
+    background-color: #fff;
+    transition: all 0.5s;
+  }  
+  &__item:hover{
+    transform: scale(1.1); 
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.5);
+  }
+  &__img{
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-bottom: 34px;  
+  }  
+  &__content{
+    height: 90px;
+    position: relative;
+    padding: 0 45px 0 30px;
+  }
+  &__news{
+    position: absolute;
+    top: -53px;
+    left: 30px;
+    font-size: 14px;
+    line-height: 12px;
+    color: #fff;
+    border: 1px solid $btn;
+    background-color: $btn;
+    padding: 10px 30px ;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }  
+  &__news:hover{
+    border: 1px solid $title__2;
+    background-color: $title__2;
+  }
+  &__link{
+    font-size: 18px;
+    line-height: 18px;
+    color: #262626;   
+    @extend %DMSans-500;
+    transition: all 0.3s;    
+  }
+  &__link:hover{
+    color: $default;
+  }
+  &__info{
+    display: flex;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 12px;
+    @extend %Rubik-400;
+    font-size: 12px;
+    line-height: 30px;    
+    margin: -15px 45px 0 30px;
+    .articles__date{
+    color: #222933;    
+    position: relative;
+    margin-right: 25px;
+    padding-left: 17px;
+    }
+    .articles__date::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/date.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 14px;
+      height: 14px;
+      top: 6px;
+      left: 0;
+    }
+    .articles__author{
+      color: #222933; 
+      padding-left: 15px; 
+      position: relative;
+      transition: all 0.5s;  
+    }
+    .articles__author::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/admin.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 14px;
+      height: 14px;
+      top: 6px;
+      left: 0;
+    }
+    .articles__author:hover{
+      color: $default; 
+      font-weight: 700px;
+    }
+  }  
+}

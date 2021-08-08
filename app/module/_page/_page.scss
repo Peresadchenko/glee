@@ -1,0 +1,16 @@
+.page{
+  &__top{
+    height: 125px;
+    background-color: #edf1f4;
+    text-align: center;
+    padding: 35px 0;
+    margin-bottom: 113px;
+  }
+  &__title{
+    font-size: 35px;
+    line-height: 24px;
+    color: #222933;    
+    @extend %Rubik-300;
+    margin-bottom: 15px;
+  }
+}
