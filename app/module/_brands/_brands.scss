@@ -20,3 +20,22 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 850px){
+  .brands{
+    margin-bottom: 50px;
+    padding: 260px 0 45px;
+    &__img {
+      max-width: 80%;
+    }
+    .brands__item:last-child {
+      padding-right: 10px;
+    }
+  }  
+}
+
+@media (max-width: 450px){
+  .brands{
+    padding: 260px 0 30px;
+  }
+}

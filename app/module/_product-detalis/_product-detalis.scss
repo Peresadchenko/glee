@@ -313,3 +313,119 @@
     }
   } 
 }
+
+@media (max-width: 1050px){
+  .product-detalis {
+    margin-bottom: 60px;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__content {
+      order: 0;
+      margin-bottom: 20px;
+      width: 620px;
+    }
+    &__content-form {
+      margin-bottom: 20px;
+    }
+    &__tabs {
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+  }  
+  .product-slide{
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 850px){
+  .product-detalis__top-item {
+    font-size: 15px;
+    line-height: 15px;
+    width: 190px;
+    height: 55px;
+  }
+  .product-detalis__slider-top {
+    margin-bottom: 50px;
+  }
+  .product-detalis__content {
+    width: auto;
+  }
+}
+
+@media (max-width: 650px){
+  .product-detalis{
+    &__top-item {
+      font-size: 15px;
+      width: 190px;
+      height: 55px;
+    }
+    &__slider-title {
+      font-size: 33px;
+    }
+    &__tabs-top {
+      display: flex;
+    }
+    .product-slide {
+      width: auto;
+    }
+    .product-slide__thumb{
+      display: none;
+    }
+    .product-slide {
+      width: auto;
+      margin-right: 0;
+    }
+  }  
+}
+
+@media (max-width: 450px){
+  .product-detalis{
+    &__tabs {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    &__tabs-top {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+    &__top-item{
+      margin-bottom: 15px;
+    }
+    &__slider-title {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    &__content-title {
+      font-size: 30px;
+      margin: 20px 0 15px;
+    }
+    &__content-price {
+      font-size: 25px;
+    }
+    &__content-text {
+      margin: 20px 0 30px;
+    }
+    &__content-btn {
+      padding: 18px 15px;
+    }
+    &__slider-top{
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &__slider-buttons{
+      margin: 0 auto;
+    }
+    .product-slide{
+      margin-bottom: 50px;
+    }
+    .product-slide__big{
+      height: 480px;
+      width: 320px;
+      
+    }   
+  }
+}

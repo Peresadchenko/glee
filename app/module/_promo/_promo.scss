@@ -77,3 +77,76 @@
       background-image: url('../images/icons/arrow.png');
   }
 }
+
+@media (max-width: 1550px){
+  .promo{
+    &__item{
+      padding-left: 20px; 
+    }
+    &__item-content-2{
+      margin-left: 25px;
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .promo{
+    &__item{  
+      padding-top: 0;
+    }
+    &__item-content-2{
+      margin-left: 5px;
+      .promo__text{
+        margin-bottom: 15px;
+      }
+    }
+    &__item-img{
+      height: 100%;
+      margin-top: 30px;
+    }    
+  }
+}
+
+@media (max-width: 850px){
+  .promo{
+    margin-bottom: 50px;
+    &__item{
+      max-height: 330px;
+    }
+    &__item-img{
+      height: 30%;
+    }   
+    &__title{
+      font-size: 18px;
+    } 
+    &__text{
+      font-size: 12px;
+    }
+    &__btn{
+      padding: 10px 90px 10px 20px;
+    }
+    .promo__item+.promo__item {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .promo{
+    &__item-img{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .promo{
+    &__btn{
+      padding: 10px 55px 10px 20px;
+    }
+    &__text{
+      line-height: 20px;
+      margin-bottom: 48px;
+    }
+  }
+}

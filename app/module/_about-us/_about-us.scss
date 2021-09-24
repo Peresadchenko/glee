@@ -7,6 +7,9 @@
     width: 100%;
     margin: 10px 45px 0 -2px;
   }
+  &__content{    
+    margin-right: 10px;
+  }
   &__content-box{
     display: flex;
     margin: 126px 0 43px 8px;
@@ -163,6 +166,224 @@
       line-height: 32px;
       @extend %DMSans-700;
       color: $title__2;
+    }
+  }  
+}
+
+@media (max-width: 1200px){
+  .about-us{   
+    &__top{      
+      margin-bottom: 60px;
+    }
+    &__content{
+      width: 500px;
+    }  
+    &__img{
+      width: 40%;
+      height: 40%;
+    }
+    &__content-box{
+      display: flex;
+      margin: 60px 0 30px 8px; 
+    }   
+    &__text{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 950px){
+  .about-us{  
+    &__content{
+      max-width: 450px;
+    } 
+    &__line{
+      width: 450px;
+    }
+    &__info {
+      max-width: 470px;
+    }
+    &__statistics-items{
+      height: 260px; 
+    }
+    .statistics-item__text{
+      line-height: 25px;
+      max-width: 99%;
+    }    
+  }
+}
+
+@media (max-width: 850px){
+ .about-us{  
+   &__top{      
+      margin-bottom: 30px;
+    }
+    &__content{
+      max-width: 360px;
+    } 
+    &__content-box{
+      display: flex;
+      margin: 40px 0 20px 8px; 
+      .content-box__number{
+        font-size: 120px;
+      } 
+    }
+    .content-box__items {
+      margin-top: -23px;
+    }
+    &__title{
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 23px;
+    }
+    &__line{
+      width: 360px;
+    }
+    &__img{
+      margin: 10px 20px 0 -2px;
+    }
+    &__info {
+      max-width: 385px;
+    }
+    &__info-item{
+      padding-left: 50px;
+    }
+    &__statistics-items{
+      height: 200px; 
+    }
+    .info-item__number{
+      font-size: 25px;
+    } 
+    .statistics-item__text{
+      max-width: 99%;
+      font-size: 16px;
+      line-height: 21px;
+    }    
+    .statistics-item__number{
+      font-size: 26px;
+      line-height: 15px;
+    }
+    .statistics-item__clients{
+      margin-left: 20px;
+    }
+    .statistics-item__products{
+      margin-left: 0;
+    }
+    .statistics-item__brands{  
+      margin-right: 20px;
+    }  
+  } 
+}
+
+@media (max-width: 650px){
+  .about-us{
+    &__img{
+      display: none;
+    }
+     &__content {
+      max-width: 490px;      
+    }    
+    &__line{
+      width: 490px;
+    }
+    &__info{
+      max-width: 490px;
+    }
+    &__statistics {
+      margin-bottom: 60px;
+    }
+    &__statistics-items {
+      height: 340px;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      flex-direction: column;
+    }
+    .statistics-item__text {
+      max-width: 100%;
+    }
+    .statistics-item__clients {
+      margin-left: 0;
+      padding-left: 95px;
+      .statistics-item__img {
+        top: 0;
+        left: 0;
+      }
+    }
+    .statistics-item__products {
+      padding-left: 105px;
+      .statistics-item__img {
+        top: 0;
+        left: 0;
+      }
+    }
+    .statistics-item__time {
+      padding-left: 110px;
+      .statistics-item__img {
+        top: 0;
+        left: 0;
+      }
+    }
+    .statistics-item__brands {
+      margin-right: 0;
+      padding-left: 110px;
+      .statistics-item__img {
+        top: 0;
+        left: 0;
+      }
+    }
+  }    
+}
+
+@media (max-width: 600px){
+  .about-us{    
+    &__content {
+      max-width: 420px;
+    }
+    &__line{
+      width: 420px;
+    }
+    &__info{
+      max-width: 420px;
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .about-us{
+    &__content {
+      max-width: 320px;
+    }
+    &__line{
+      width: 290px;
+    }
+    &__info{
+      max-width: 320px;
+    }
+    &__info-item{
+      padding-left: 35px;
+      margin-top: 20px;
+    }
+    .about-us__info-projects::before {
+      height: 30px;
+      width: 30px;
+    }
+    .about-us__info-revenue::before{
+      height: 30px;
+      width: 30px;
+    }
+    .about-us__info-awards::before{
+      height: 30px;
+      width: 30px;
+    }
+    .info-item__number{
+      font-size: 23px;
+    } 
+    .statistics-item__text{
+      font-size: 14px;
     }
   }  
 }

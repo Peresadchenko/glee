@@ -156,7 +156,7 @@
   }
 }
 
-@media (max-width: 599px){
+@media (max-width: 600px){
   .footer{
     .footer-top__title{
       pointer-events: visible;
@@ -170,7 +170,7 @@
 @media (max-width: 650px){
   .footer{
     .footer-top{
-      justify-content: end;
+      justify-content: start;
     }
     .footer-top__contact {
       width: 100%;

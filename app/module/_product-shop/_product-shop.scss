@@ -3,6 +3,9 @@
     &__inner{
     display: flex;
   }
+  &__filter-btn{
+    display: none;
+  }
   &__filters{
     width: 270px;
     margin-right: 10px;
@@ -198,4 +201,107 @@
       }      
     }
   } 
+}
+
+@media (max-width: 850px){
+  .product-shop{
+    &__inner{
+      display: block;
+    }    
+    &__filters{
+      width: 100%;
+      margin-right: 0;
+      padding: 0 10px;
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 100;
+      background: #fff;
+    }
+    &__filter-btn{
+      display: block;
+      border: none;
+      border-radius: 5px;
+      background-color: $btn;
+      padding: 0;
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      right: 0;
+      z-index: 101;
+      bottom: 50px;
+      transition: all .5s;
+    }
+    &__filter-btn:hover{
+      background-color: #a3bbc874;
+    }
+    &__content{
+      width: 100%;
+    } 
+    &__items{
+      .products__item.products__item--list .product__item-info{
+        max-width: 300px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .product-shop{
+    margin-bottom: 60px;
+    &__items{
+      .products__item{
+        width: calc(100% / 2 - 30px);
+      }
+    } 
+    &__items{
+      .products__item.products__item--list .product__item-info{
+        max-width: 140px;
+        margin-top: 0;
+      }
+      .products__item.products__item--list .products__item-price {
+        margin: 15px 0 10px 5px;
+      }
+      .products__item.products__item--list .product__item-text {
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 5px;
+      }
+      .products__item.products__item--list .product__item-btn {
+        padding: 10px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .product-shop{
+    &__items{
+      .products__item{
+        width: calc(100% / 1 - 30px);
+      }
+    } 
+    .content-filter__buttons{
+      display: none;
+    }
+  }
+  .pagination{
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 450px){
+   .product-shop{
+    &__items{
+      margin-left: 0;
+    }
+  }
+  .pagination__next {
+    padding: 15px 15px;
+  }
+  .pagination__link{
+    padding: 15px 21px;
+  }
 }
