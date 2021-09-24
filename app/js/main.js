@@ -126,7 +126,20 @@ $(function(){
     $('.product-detalis__slider-inner').slick("slickNext");
   });
 
-  var mixer = mixitup('.products__items');
-  var mixer = mixitup('.design__items');
+  
+  var mixer1 = mixitup('.products__items');
+  var mixer2 = mixitup('.design__items');
+
+  // var containerEl1 = document.querySelector('.products__items');
+  // var containerEl2 = document.querySelector('.design__items');
+
+  // var config = {
+  //   controls: {
+  //     scope: 'local',
+  //   },
+  // };
+
+  // var mixer1 = mixitup(containerEl1, config);
+  // var mixer2 = mixitup(containerEl2, config);
   
 });

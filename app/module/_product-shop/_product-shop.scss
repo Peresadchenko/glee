@@ -223,7 +223,7 @@
       display: block;
       border: none;
       border-radius: 5px;
-      background-color: $btn;
+      background-color: #a3bbc874;
       padding: 0;
       width: 60px;
       height: 60px;
@@ -234,7 +234,7 @@
       transition: all .5s;
     }
     &__filter-btn:hover{
-      background-color: #a3bbc874;
+      background-color: $btn;
     }
     &__content{
       width: 100%;

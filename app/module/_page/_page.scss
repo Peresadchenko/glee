@@ -22,3 +22,12 @@
     }
   }
 }
+
+@media (max-width: 650px){
+  .page{
+    &__title{
+      font-size: 30px;
+    }
+  }
+}
+
