@@ -1,10 +1,10 @@
-$(function(){
+$(function () {
 
-  $('.menu__btn').on('click', function(){
+  $('.menu__btn').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active');
   });
 
-  $('.footer-top__title').on('click', function (){
+  $('.footer-top__title').on('click', function () {
     $(this).next().slideToggle();
     $(this).toggleClass('active');
   });
@@ -12,8 +12,8 @@ $(function(){
   $('.product-shop__filter-btn').on('click', function () {
     $('.product-shop__filters').slideToggle();
   });
-  
-  $('.product-detalis__top-item').on('click', function(e){
+
+  $('.product-detalis__top-item').on('click', function (e) {
     e.preventDefault();
     $('.product-detalis__top-item').removeClass('product-detalis__top-item--active');
     $(this).addClass('product-detalis__top-item--active');
@@ -39,7 +39,7 @@ $(function(){
     responsive: [
       {
         breakpoint: 650,
-        settings:{
+        settings: {
           draggable: true,
         }
       }
@@ -60,16 +60,16 @@ $(function(){
     $('.products__item').removeClass('products__item--list');
     $('.pagination').removeClass('pagination--list');
   });
-  
+
   $('.product-detalis__content-num').styler();
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",
     step: 0.1,
-    onStart: function (data) {  
+    onStart: function (data) {
       $('.filter-price__from').text(data.from);
-      $('.filter-price__to').text(data.to);      
+      $('.filter-price__to').text(data.to);
     },
     onChange: function (data) {
       $('.filter-price__from').text(data.from);
@@ -88,7 +88,7 @@ $(function(){
     ratedFill: "#ffcc00",
     readOnly: true
   });
- 
+
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
@@ -126,20 +126,17 @@ $(function(){
     $('.product-detalis__slider-inner').slick("slickNext");
   });
 
-  
-  var mixer1 = mixitup('.products__items');
-  var mixer2 = mixitup('.design__items');
 
-  // var containerEl1 = document.querySelector('.products__items');
-  // var containerEl2 = document.querySelector('.design__items');
 
-  // var config = {
-  //   controls: {
-  //     scope: 'local',
-  //   },
-  // };
+  let containerEl1 = document.querySelector('.design');
+  let containerEl2 = document.querySelector('.products');
+  let config = {
+    controls: {
+      scope: 'local',
+    },
+  };
+  (() => mixitup(containerEl1, config))();
+  (() => mixitup(containerEl2, config))();
 
-  // var mixer1 = mixitup(containerEl1, config);
-  // var mixer2 = mixitup(containerEl2, config);
-  
 });
+
