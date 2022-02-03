@@ -1,0 +1,41 @@
+.brands{
+  background-color: #fef7f0;
+  padding: 260px 0 90px;
+  margin-top: -295px;
+  margin-bottom: 76px;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    height: 90px;
+    &:last-child{
+      padding-right: 42px;
+    }
+  }
+  &__img{
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 850px){
+  .brands{
+    margin-bottom: 50px;
+    padding: 260px 0 45px;
+    &__img {
+      max-width: 80%;
+    }
+    .brands__item:last-child {
+      padding-right: 10px;
+    }
+  }  
+}
+
+@media (max-width: 450px){
+  .brands{
+    padding: 260px 0 30px;
+  }
+}

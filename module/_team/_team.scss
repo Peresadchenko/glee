@@ -1,0 +1,144 @@
+.team{
+  margin-bottom: 86px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__inner-content{
+    max-width: 330px;
+    margin-right: 67px;
+  }
+  &__content-title{
+    font-size: 36px;
+    line-height: 32px;
+    @extend %DMSans-700;
+    color: $title__2;
+    margin-bottom: 25px;
+  }
+  &__content-text{
+    font-size: 16px;
+    line-height: 30px;
+    @extend %Rubik-400;
+    color: $title__2;
+    margin-bottom: 35px;
+  }
+  &__content-btn{
+    @extend %btn;
+  }
+  &__content-btn:hover{
+    background-color: $title__2;
+    border: 1px solid  $title__2;
+    border-radius: 3px;
+  }
+  &__content-btn::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/arrow.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    top: 17px;
+    right: 20px;
+    height: 8px;
+    width: 20px;    
+  }
+  &__inner-items{
+    display: flex;
+    flex-wrap: wrap;    
+  }
+  &__item{
+    width: calc(100% / 2 - 0px);
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  &__item-box{
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-top: -55px;
+    z-index: 1;
+    max-width: 325px;
+    padding: 30px 25px;
+    position: relative;    
+  } 
+  &__item-name{
+    font-size: 22px;
+    line-height: 26px;
+    @extend %DMSans-700;
+    color: #436372;
+  }
+  &__item-text{
+    font-size: 16px;
+    line-height: 30px;
+    @extend %Rubik-400;
+    color: #565872;
+  }
+  &__item-link{
+    position: absolute;
+    border: 1px solid #f6f6f6;
+    background-color: #f6f6f6;
+    border-radius: 50%;  
+    transition: all .5s;  
+  }
+  &__item-link:hover{
+    background-color: $btn;
+    transform: scale(1.1);
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.5);
+  }
+  &__item-link--inst{    
+    top: 30px;
+    right: 70px;   
+    padding: 12px; 
+  }
+  &__item-link--google{
+    top: 30px;
+    right: 22px;
+    padding: 13px 9px;
+  }
+}
+
+@media (max-width: 1200px){
+  .team{
+    img{
+      max-width: 95%;
+    }
+    &__item-box {
+      max-width: 270px;
+      padding: 30px 15px;
+    }
+    &__item-name {
+      font-size: 20px;
+    }
+    &__item-text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .team{
+    &__inner-content {
+      max-width: 250px;
+      margin-right: 67px;
+    }
+  }
+}
+
+@media (max-width: 950px){
+  .team{
+    &__item {
+      width: calc(100% / 1 - 0px);
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .team{
+    &__inner{
+      flex-direction: column;
+    }    
+    &__inner-content {
+      max-width: 100%;
+      margin-bottom: 30px;
+      margin-right: 20px;
+    }
+  }
+}

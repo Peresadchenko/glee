@@ -1,0 +1,166 @@
+.top-slider{  
+  &__item{    
+    background-color: $accent;
+    padding: 220px 220px;    
+    padding-bottom: 279px;
+    display: flex !important;
+    justify-content: center;
+    margin-bottom: 200px;
+    position: relative;
+  }
+  &__item::before{
+    content: "";
+    position: absolute;
+    top: 51%;
+    right: 186px;
+    width: 630px;
+    height: 630px;
+    background-image: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  &__content{
+    padding-right: 60px;
+    z-index: 1;
+  }
+  &__title{
+    max-width: 470px;
+    font-size: 72px;
+    line-height: 70px;
+    @extend %Rubik-500;
+    color: $title__2;
+    margin-bottom: 28px;
+  }
+  &__text{
+    max-width: 380px;
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #436372;
+    @extend %Rubik-400;
+  }
+  &__btn{
+    display: inline-block;
+    border: 1px solid $btn;
+    background-color: $btn;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 23px 104px 23px 22px;
+    color: #fff;
+    @extend %Rubik-500;
+    position: relative;
+    transition: all .5s;
+  }
+  &__btn:hover{
+    background-color: $title__2;
+    border: 1px solid  $title__2;
+    border-radius: 3px;
+  }
+  &__btn::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/arrow.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    top: 23px;
+    right: 20px;
+    height: 9px;
+    width: 22px;    
+  }
+  .slick-slide img {
+    width: 50%;
+    height: 50%;
+    margin-top: 50px;
+    z-index: 2;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -275px;
+    transform: translateY(-362%);
+    li{
+        margin-right: 8px;
+        margin-bottom: 45px;
+      button{
+        padding: 0;
+        font-size: 11px;      
+        color: $title__2;  
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fde3cc;
+        background-color: #fde3cc;
+        border-radius: 50%;        
+        cursor: pointer;
+      }
+      &.slick-active button{
+        border: 1px solid #fff;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }  
+}
+
+@media (max-width: 1200px){
+  .top-slider{
+    &__item{
+      padding: 160px 100px; 
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .top-slider{
+    &__item{
+      padding: 110px 60px; 
+    }
+  }
+}
+
+@media (max-width: 850px){
+  .top-slider{
+    &__item{
+      padding: 50px 60px; 
+    }
+    .slick-slide img{
+      display: none;
+    }
+    &__btn{
+      padding: 23px 60px 23px 22px;
+    }
+    &__item::before{
+      top: 25%;
+    }
+    &__content{
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .top-slider{
+    &__title{
+      font-size: 50px;    
+      margin-bottom: 10px;
+    }  
+    .slick-dots{
+      margin-bottom: -260px;
+      li{
+        margin-bottom: 37px;
+      }
+    } 
+  }
+}
+
+@media (max-width: 450px){
+  .top-slider{
+    &__item::before{
+      right: 75px;
+    }
+    &__text{
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}
